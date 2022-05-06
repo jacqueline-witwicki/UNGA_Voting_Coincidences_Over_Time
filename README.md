@@ -21,7 +21,7 @@
 #### INPUTS :
 
 1. Country_Code_index.txt ->   
-   * This file contains UNGA member states and their country codes.
+   * This file contains UNGA member states and their country codes. I wrote this file by hand using country codes in wourld_countries_2020.shp. 
 
    * It is used by DF_OUTPUT_EDIT.py to produce files with the (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv naming convention.
                     
@@ -33,22 +33,12 @@
   
    * This file is not included in this repository due to its size. It is produced by IPUMS International and can be downloaded by clicking the link at the top of the page [HERE](https://international.ipums.org/international/gis.shtml "IPUMS International Shape File")
    
-   * The user inserts the country they want to calculate coincidences for, against the rest of all UNGA member states, as key1, in line 103. This selection should be reflected in the name of the output file.   
-   
-   * This file returns a CSV file with the naming scheme (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv , which contains UNGA member countries, their voting coincidence with the key1 country as a decimal, the year associated with the input file, and their three digit numeric country code.
-   
-   * The output of this code is an input of For_Map_Joiner.py  
-  
 
 3. United Nations Digital Library Voting Data ->    
-   * This file concatenates a list of files produced by DF_OUTPUT_EDIT.py to create a file using the (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv naming pattern. 
+   * text_parser.py scrapes this data directly from the United Nations Digital Library Website and uses it to produce files with the (*YEAR*)_RAW_COIN.csv naming convention. 
   
-   * The user selects what files they wish to be included in the output, (*key1 COUNTRY*)_For_Map.csv.
+   * The digital library contains UNGA voting data organized by resolution and year. It can be viewed [HERE](https://digitallibrary.un.org/search?ln=en&cc=Voting%20Data&p=&f=&rm=&ln=en&sf=year&so=a&rg=50&c=Voting%20Data&c=&of=hb&fti=0&fct__2=General%20Assembly&fct__9=Vote&fct__3=2021&fti=0&fct__2=General%20Assembly&fct__9=Vote&fct__3=2021 "United Nations Digital Library")
    
-   * (*key1 COUNTRY*)_For_Map.csv can be joined with wourld_countries_2020.shp from IPUMS International using Tableau to create outputs similar to those in the Tableau Public link above. 
-  
-
-
 
 #### PYTHON FILES:
     
