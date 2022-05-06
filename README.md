@@ -14,6 +14,8 @@
 
 > The results of this repository can be used to gain a better understanding of the relationships between member states in the United Nations General Assembly (UNGA).
 > The results can also be used to determine how ideologically aligned various member states are.
+> For example, as of 6 May 2022, the only resolutions that have come to a vote have been in response to Russia's invasion of Ukraine.
+> Looking at voting coincidences in 2022, you can understande the feelings of all UNGA members states, regarding the conflict.
 > These relationships can be modeled with maps,line graphs, bar charts, and various other visualization tools.
 > I created a Tableau Public page to model the result of using this repository to calculate voting coincidences for The United States, China, and Russia with all other member states.
 > Explore the results on Tableau [HERE.](https://public.tableau.com/views/VotingCoincidencesintheUnitedNationsGeneralAssemblyOverTime/VotingCoincidenceswithKeyUNGAMemberStates?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link "Jacqueline's Tableau")
