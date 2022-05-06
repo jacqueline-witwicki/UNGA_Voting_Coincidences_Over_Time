@@ -5,15 +5,21 @@ Created on Mon Apr 18 16:45:24 2022
 
 @author: jacquelinewitwicki
 """
-#NOTE: THE YEAR USED IN THE EACHYEAR FUNCTION IN LINE 36 AND USED TO LABEL THE OUTPUT FILE SHOULD ALL BE THE SAME.
+#NOTE: THE YEAR USED IN THE EACHYEAR FUNCTION IN LINE 36 AND USED TO LABEL THE 
+#OUTPUT FILE SHOULD ALL BE THE SAME.
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
 
 def eachyear(year):
-#The eachyear function accepts a given year as input and produces title_list, which contains a list of java handles.
-#Each item in title list is associated with a UNGA resolution that came to a vote, in the given year.   
+    
+#The eachyear function accepts a given year as input and produces title_list, 
+#which contains a list of java handles.
+#Each item in title list is associated with a UNGA resolution that came to a 
+#vote, in the given year.   
+
     def getdata(url): 
         r = requests.get(url) 
         return r.text 
@@ -38,10 +44,15 @@ codes=eachyear("2022")
 
 #%%
 def eachres(java):
-#The eachres function accepts a java handle and produces a cleaned version of the text on the associated resolution's UN Digital library page.
-#For the resolution associated with the given input, the function identifies the resolution number and the list of votes.
-#It then creates a list of dictionaries that each contail the country's name, the given resolution, and how the country voted.
+    
+#The eachres function accepts a java handle and produces a cleaned version of 
+#the text on the associated resolution's UN Digital library page.
+#For the resolution associated with the given input, the function identifies 
+#the resolution number and the list of votes.
+#It then creates a list of dictionaries that each contail the country's name, 
+#the given resolution, and how the country voted.
 #For votes, Y = a yes vote, N = no, A = abstain, X = absent     
+
     def getdata(url): 
         r = requests.get(url) 
         return r.text 
@@ -78,11 +89,16 @@ def eachres(java):
 
 #%%
 #Fix_names contains a dictionary of former country names and their current names.
-#This is used in the below loop to ensure countries can be tracked over time, regardless of name changes.
-#The decision was made to track  Serbia and Montenegro's voting data under Serbia, until Serbia and Montenegro split.
-#As the focus of this analysis was on the last 20-30 years, this only captures name changes after the break up of the USSR. 
+#This is used in the below loop to ensure countries can be tracked over time, 
+#regardless of name changes.
+#The decision was made to track  Serbia and Montenegro's voting data under 
+#Serbia, until Serbia and Montenegro split.
+#As the focus of this analysis was on the last 20-30 years, this only captures
+# name changes after the break up of the USSR. 
 #The choice was made to exclude some state that no longer exist from tables 
-#More states can be added in the below dictionary to extend analysis further back in the "Old Name":"New Name" format
+#More states can be added in the below dictionary to extend analysis further 
+#back in the "Old Name":"New Name" format
+
 fix_names={
     "CZECH REPUBLIC":"CZECHIA",
     "THE FORMER YUGOSLAV REPUBLIC OF MACEDONIA":"NORTH MACEDONIA",
@@ -96,8 +112,11 @@ fix_names={
     "SWAZILAND":"ESWATINI"}
   
 #The below for loop builds dataframe df and transposes it into dataframe df_t.
-#Using the eachres function, defined abouve, to build a dataframe containing vote data for each resolution, the loop concatenates these dataframes.
-#The product of this loop is a dataframe that contains each countries vote for the year given to the eachyear fuction in codes, line 36.
+#Using the eachres function, defined abouve, to build a dataframe containing 
+#vote data for each resolution, the loop concatenates these dataframes.
+#The product of this loop is a dataframe that contains each countries vote for 
+#the year given to the eachyear fuction in codes, line 36.
+
 df = pd.DataFrame(columns=["Country"])
 
 for item in codes:
@@ -109,9 +128,13 @@ for item in codes:
 
     
     df_t=df.T
-#Below, df_t, containing vote data on all resolutions for the given year is saved to a CSV file and printed.
+    
+#Below, df_t, containing vote data on all resolutions for the given year is 
+#saved to a CSV file and printed.
 #This CSV file will be the input file in #DF_OUTPUT_EDIT
-#Be sure to name this CSV file appropriately. Details on naming can be found in the README.md file.
+#Be sure to name this CSV file appropriately. Details on naming can be found 
+#in the README.md file.
+
 df_t.to_csv("2022_RAW_COIN.csv",index=False,header=True)    
 print(df_t)
 
