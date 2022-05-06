@@ -106,4 +106,6 @@
    * The files are joined on the the three digit country codes for each country. 
    
    * The Tableau Dashboard in the files contains three maps and three bar graphs, visualizing coincidences over time for the key1 countries associated with the input files.
+   
+   * The output of this file can be accessed in Tableau Public, above. 
             
