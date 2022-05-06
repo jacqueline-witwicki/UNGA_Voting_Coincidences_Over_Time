@@ -95,5 +95,7 @@
 3. (*key1 COUNTRY*)_For_Map.csv  ->    
    * Files with this naming convention are outputs of For_Map_Joiner.py and inputs of the Tableau project, Voting Coincidences in the United Nations General Assembly Over Time.twb. These files can be joined with wourld_countries_2020.shp from IPUMS International using Tableau to create various visualizations.
   
-   * These files hold concatenated information from all For_Map_Joiner.py input files used in their production.           
+   * These files hold concatenated information from all For_Map_Joiner.py input files used in their production.      
+   
+   * Files with this naming convention that also contain the number 2 include data from 1992-2022. All other files with this name contain data from 2003-2022.          
             
