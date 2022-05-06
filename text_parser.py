@@ -1,32 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sat Apr 23 21:31:18 2022
-
-@author: jacquelinewitwicki
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
 Created on Mon Apr 18 16:45:24 2022
 
 @author: jacquelinewitwicki
 """
-
-
 
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
 
-
-
-
-
 def eachyear(year):
-    
+#The eachyear function accepts a given year as input and produces title_list, which contains a list of java handles.
+#Each item in title list is associated with a UNGA resolution that came to a vote, in the given year.   
     def getdata(url): 
         r = requests.get(url) 
         return r.text 
@@ -46,11 +33,15 @@ def eachyear(year):
         title_list.append(title)
     return title_list
     
-codes=eachyear("1992")
+codes=eachyear("2022")
+#^INSERT THE TARGET YEAR YOU WANT TO PULL VOTE DATA FROM IN THE ABOVE FUNCTION
 
-
+#%%
 def eachres(java):
-    
+#The eachres function accepts a java handle and produces a cleaned version of the text on the associated resolution's UN Digital library page.
+#For the resolution associated with the given input, the function identifies the resolution number and the list of votes.
+#It then creates a list of dictionaries that each contail the country's name, the given resolution, and how the country voted.
+#For votes, Y = a yes vote, N = no, A = abstain, X = absent     
     def getdata(url): 
         r = requests.get(url) 
         return r.text 
@@ -75,7 +66,6 @@ def eachres(java):
        vote=data.get_text().strip()
        
        if vote.split(' ')[0] in options:
-           #vote.split(' ')[0]=vote.split(' ')[0].replace(alt_options)
            count={"Country":str(vote).strip()[2:],resolution:str(vote).split(" ")[0]} 
            count_list.append(count)
        elif vote == (''):
@@ -83,21 +73,15 @@ def eachres(java):
        else:
            count={"Country":str(vote),resolution:"X"}
            count_list.append(count)
-           
-       
-    
-  
+ 
     return count_list
 
-country_list=[]
-code=codes[0]
-counts=eachres(code)
-for line in counts:
-    CountryPlease=line.get("Country")
-    country_list.append(CountryPlease)
-print(country_list) 
-
-
+#%%
+#Fix_names contains a dictionary of former country names and their current names.
+#This is used in the below loop to ensure countries can be tracked over time, regardless of name changes.
+#The decision was made to track  Serbia and Montenegro's voting data under Serbia, until Serbia and Montenegro split.
+#As the focus of this analysis was on the last 20-30 years, this only captures name changes after the break up of the USSR. 
+#More states can be added in the below dictionary to extend analysis further back in the "Old Name":"New Name" format
 fix_names={
     "CZECH REPUBLIC":"CZECHIA",
     "THE FORMER YUGOSLAV REPUBLIC OF MACEDONIA":"NORTH MACEDONIA",
@@ -110,13 +94,13 @@ fix_names={
     "SERBIAMONTENEGRO":"SERBIA",
     "SWAZILAND":"ESWATINI"}
   
-problem_children=[]
-
+#The below for loop builds dataframe df and transposes it into dataframe df_t.
+#Using the eachres function, defined abouve, to build a dataframe containing vote data for each resolution, the loop concatenates these dataframes.
+#The product of this loop is a dataframe that contains each countries vote for the year given to the eachyear fuction in codes, line 36.
 df = pd.DataFrame(columns=["Country"])
 
 for item in codes:
     item = pd.DataFrame(eachres(item))
-    item=item[item["Country"].isin(problem_children)==False]
     item["Country"]=item["Country"].replace(fix_names)
     item.set_index("Country",inplace=True,drop=True)
 
@@ -124,8 +108,10 @@ for item in codes:
 
     
     df_t=df.T
-
-df_t.to_csv("1992_RAW_COIN.csv",index=False,header=True)    
+#Below, df_t, containing vote data on all resolutions for the given year is saved to a CSV file and printed.
+#This CSV file will be the input file in #DF_OUTPUT_EDIT
+#Be sure to name this CSV file appropriately. Details on naming can be found in the README.md file.
+df_t.to_csv("2022_RAW_COIN.csv",index=False,header=True)    
 print(df_t)
 
 
