@@ -14,10 +14,10 @@
 
 > The results of this repository can be used to gain a better understanding of the relationships between member states in the United Nations General Assembly (UNGA).
 > The results can also be used to determine how ideologically aligned various member states are.
-> For example, as of 6 May 2022, the only resolutions that have come to a vote have been in response to Russia's invasion of Ukraine.
+> For example, as of 6 May 2022, the only resolutions that have come to a vote in 2022 have been in response to Russia's invasion of Ukraine.
 > Looking at voting coincidences in 2022, you can understande the feelings of all UNGA members states, regarding the conflict.
 > These relationships can be modeled with maps,line graphs, bar charts, and various other visualization tools.
-> I created a Tableau Public page to model the result of using this repository to calculate voting coincidences for The United States, China, and Russia with all other member states.
+> I created a Tableau Public page to model the result of using this repository to calculate voting coincidences for The United States, China, and Russia with all other member states, over time.
 > Explore the results on Tableau [HERE.](https://public.tableau.com/views/VotingCoincidencesintheUnitedNationsGeneralAssemblyOverTime/VotingCoincidenceswithKeyUNGAMemberStates?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link "Jacqueline's Tableau")
 
 
@@ -33,7 +33,7 @@
                     
    
 2. wourld_countries_2020.shp  ->    
-   * This file joins with files that have the (*key1 COUNTRY*)_For_Map.csv naming convention on the three digit country codes.
+   * Using Tableau, this file joins with files that have the (*key1 COUNTRY*)_For_Map.csv naming convention on the three digit country codes.
    
    * This file contains polygon information that produces a map of the world with 2020 country borders.
   
@@ -71,9 +71,9 @@
   
 
 3. For_Map_Joiner.py ->    
-   * This file concatenates a list of files produced by DF_OUTPUT_EDIT.py to create a file using the (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv naming pattern. 
+   * This file concatenates a list of files produced by DF_OUTPUT_EDIT.py to create a file using the (*key1 COUNTRY*)_For_Map.csv naming pattern. 
   
-   * The user selects what files they wish to be included in the output, (*key1 COUNTRY*)_For_Map.csv.
+   * The user selects what files with the (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv naming scheme they wish to be included in the output, (*key1 COUNTRY*)_For_Map.csv. These input files should have the same key1 country and span multiple years of interest. 
    
    * (*key1 COUNTRY*)_For_Map.csv can be joined with wourld_countries_2020.shp from IPUMS International using Tableau to create outputs similar to those in the Tableau Public link above. 
   
