@@ -21,7 +21,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='VotingCoincidencesintheUnitedNationsGeneralAssemblyOverTime' path='/workbooks' revision='1.8' />
+  <repository-location id='VotingCoincidencesintheUnitedNationsGeneralAssemblyOverTime' path='/workbooks' revision='2.0' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -920,7 +920,7 @@
         </groupfilter>
       </group>
       <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' type='normalized' units='records'>
-        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/jacquelinewitwicki/Documents/My Tableau Repository/Datasources/world_countries_2020.shp+ (Multiple Connections).hyper' default-settings='yes' schema='Extract' sf-has-unconstrained-join='yes' sslmode='' tablename='Extract' update-time='05/06/2022 12:07:06 AM' username='tableau_internal_user'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/jacquelinewitwicki/Documents/My Tableau Repository/Datasources/world_countries_2020.shp+ (Multiple Connections).hyper' default-settings='yes' schema='Extract' sf-has-unconstrained-join='yes' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
           <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='left' type='join'>
             <clause type='join'>
               <expression op='AND'>
@@ -1062,9 +1062,6 @@
             <map key='[Year (UNITED_STATES_For_Map.csv)]' value='[UNITED_STATES_For_Map.csv].[Year]' />
             <map key='[Year]' value='[CHINA_For_Map.csv].[Year]' />
           </cols>
-          <refresh increment-key='' incremental-updates='false'>
-            <refresh-event add-from-file-path='world_countries_2020.shp+ (Multiple Connections)' increment-value='%null%' refresh-type='create' rows-inserted='9839' timestamp-start='2022-05-06 00:06:57.269' />
-          </refresh>
           <metadata-records>
             <metadata-record class='column'>
               <remote-name>OBJECTID</remote-name>
@@ -3868,21 +3865,11 @@
               <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' filter-group='3'>
-            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;GERMANY&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;INDIA&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;PAKISTAN&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
-            </groupfilter>
-          </filter>
           <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' filter-group='4'>
             <groupfilter function='level-members' level='[none:Year (CHINA_2_For_Map.csv1):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</column>
-            <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</column>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</column>
           </slices>
           <aggregation value='true' />
@@ -4101,21 +4088,11 @@
               <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' filter-group='3'>
-            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;GERMANY&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;INDIA&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;PAKISTAN&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
-            </groupfilter>
-          </filter>
           <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' filter-group='4'>
             <groupfilter function='level-members' level='[none:Year (CHINA_2_For_Map.csv1):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</column>
-            <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</column>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</column>
           </slices>
           <aggregation value='true' />
@@ -4223,8 +4200,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Longitude (generated)]' field-type='quantitative' max='4721558.010749815' min='-1987660.5379796338' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Latitude (generated)]' field-type='quantitative' max='7806469.5961355614' min='3037152.0055095037' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Longitude (generated)]' field-type='quantitative' max='5955575.5215627737' min='-1991151.3937386521' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Latitude (generated)]' field-type='quantitative' max='8455768.7717666738' min='2806755.5238339477' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='cell'>
             <format attr='text-format' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[attr:Coincidence (RUSSIAN_FEDERATION_For_Map.csv):qk]' value='p0.00%' />
@@ -4321,21 +4298,11 @@
               <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' filter-group='3'>
-            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;GERMANY&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;INDIA&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;PAKISTAN&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
-            </groupfilter>
-          </filter>
           <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' filter-group='4'>
             <groupfilter function='level-members' level='[none:Year (CHINA_2_For_Map.csv1):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</column>
-            <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</column>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</column>
           </slices>
           <aggregation value='true' />
@@ -4552,7 +4519,7 @@
             <format attr='background-color' value='#fefaf1' />
           </zone-style>
         </zone>
-        <zone h='14286' id='87' name='China Coincidence (2)' w='99170' x='484' y='86619' />
+        <zone h='14286' id='87' name='China Coincidence (2)' w='99170' x='484' y='86000' />
         <zone h='3381' id='89' mode='checkdropdown' name='China Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' type-v2='filter' w='23806' x='484' y='51429'>
           <zone-style>
             <format attr='border-color' value='#000000' />
@@ -4561,7 +4528,7 @@
             <format attr='background-color' value='#f0eae8' />
           </zone-style>
         </zone>
-        <zone h='14286' id='90' name='US Coincidence (2)' w='99862' x='554' y='71429' />
+        <zone h='14286' id='90' name='US Coincidence (2)' w='99862' x='484' y='71190' />
         <zone h='14286' id='91' name='Russia Coincidence (2)' w='99862' x='484' y='56333' />
         <zone h='3381' id='100' mode='checkdropdown' name='Russia Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]' type-v2='filter' values='database' w='23806' x='25052' y='51429'>
           <zone-style>
@@ -4576,8 +4543,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2150' minheight='2150' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='102' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='99238' id='101' param='vert' type-v2='layout-flow' w='98892' x='554' y='381'>
+            <zone h='100000' id='116' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99238' id='115' param='vert' type-v2='layout-flow' w='98892' x='554' y='381'>
                 <zone forceUpdate='true' h='2762' id='38' type-v2='text' w='99792' x='-208' y='762'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontsize='36'>Voting Coincidences Between UNGA Member States Over Time</run>
@@ -4682,7 +4649,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='14286' id='90' is-fixed='true' name='US Coincidence (2)' w='99862' x='554' y='71429'>
+                <zone fixed-size='280' h='14286' id='90' is-fixed='true' name='US Coincidence (2)' w='99862' x='484' y='71190'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4701,7 +4668,7 @@
                     <format attr='background-color' value='#f0eae8' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='14286' id='87' is-fixed='true' name='China Coincidence (2)' w='99170' x='484' y='86619'>
+                <zone fixed-size='280' h='14286' id='87' is-fixed='true' name='China Coincidence (2)' w='99170' x='484' y='86000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4729,9 +4696,6 @@
       <viewpoints>
         <viewpoint name='China Coincidence (2)'>
           <zoom type='entire-view' />
-          <highlight field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]'>
-            <bucket-selection />
-          </highlight>
         </viewpoint>
         <viewpoint name='China Map'>
           <zoom type='entire-view' />
@@ -4748,9 +4712,6 @@
         </viewpoint>
         <viewpoint name='US Coincidence (2)'>
           <zoom type='entire-view' />
-          <highlight field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]'>
-            <bucket-selection />
-          </highlight>
         </viewpoint>
         <viewpoint name='US Map'>
           <zoom type='entire-view' />
@@ -4783,25 +4744,11 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' type='filter' />
             <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' type='filter' />
             <card pane-specification-id='10' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]' type='color' />
           </strip>
         </edge>
       </cards>
-      <viewpoint>
-        <highlight>
-          <color-one-way>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country Set]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (UNITED_STATES_2_For_Map.csv):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (UNITED_STATES_For_Map.csv):nk]</field>
-          </color-one-way>
-        </highlight>
-      </viewpoint>
       <simple-id uuid='{B5BCFAB5-98DE-490C-AE6A-04CFBF4E1D60}' />
     </window>
     <window class='worksheet' hidden='true' name='China Map'>
@@ -4866,20 +4813,6 @@
           </strip>
         </edge>
       </cards>
-      <viewpoint>
-        <highlight>
-          <color-one-way>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country Set]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (UNITED_STATES_2_For_Map.csv):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (UNITED_STATES_For_Map.csv):nk]</field>
-          </color-one-way>
-        </highlight>
-      </viewpoint>
       <simple-id uuid='{BE2747FE-D99C-488B-A0BE-F0F9955934B7}' />
     </window>
     <window class='worksheet' hidden='true' name='Russia Map '>
@@ -4938,25 +4871,11 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' type='filter' />
             <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' type='filter' />
             <card pane-specification-id='8' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]' type='color' />
           </strip>
         </edge>
       </cards>
-      <viewpoint>
-        <highlight>
-          <color-one-way>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country Set]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (UNITED_STATES_2_For_Map.csv):nk]</field>
-            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (UNITED_STATES_For_Map.csv):nk]</field>
-          </color-one-way>
-        </highlight>
-      </viewpoint>
       <simple-id uuid='{AD9A31C8-A70B-4867-861D-96F3FBAFC1B2}' />
     </window>
     <window class='worksheet' hidden='true' name='US Map'>
@@ -6211,98 +6130,98 @@
       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
-      +ha///u/zy9+8Qu6u7vZsWMHpmmyZs2a/7+9c42K6soS8HerKAoKKHlD8RIFCkRAQYPaapQo
-      aFTQVjvG1ZlOr06nf/TMJDNtdeyVFAAAEtVJREFUxlmT1Wu1f/oxk2SSSUfT8RUHH00UtdVo
-      bKJZ0EnLaKKSgCiQEAEFEeWhFBSPqjs/irrcKlDpjoqP863Fqnte++xzb7F33XvPPofCwkJS
-      UlIICgoiKysLT09PAMrLy8nJyUGj0eDp6UlXVxdvvPEGq1at4vTp03z22WeUlpZy9epVKioq
-      qKqqYv78+WzevJnOzk5+/etfk5ubS3x8PLW1tXz55ZdUVlaye/ducnNzMRqNijFcunQpHR0d
-      HD9+nNLSUq5du0ZmZibbt2/n9OnTHDlyhFWrVjFmzBjefPNNZsyYQUBAALt37wbAYDCwa9cu
-      LBYLhYWFlJSUKNOsysrKuHjxIikpKYSGhjJnzhxlPNOnT+fMmTNcvHjxlufdw8ODlStX0tLS
-      QnFxMWVlZfzqV7/CYDBw5swZPvroI/Ly8igqKqKjo4M333yTH/3oR5w4cYLa2loSExNJTExk
-      ypQpjous0ZCVlcULL7zAtm3b0Ov1pKamEhYWxpw5c9BoNMTFxbFy5UreffddZa5weno6ycnJ
-      vPfee5jNZhISEnj//ffv0ldPIBCMNrd9GP7555/T3d3NihUrSExMpKmpifz8fFpbW2lpaUGS
-      JNauXUtSUhKvvvoqP/vZz4iNjeWbb76hvb2dzZs3Y7fbaW5uRpIkZs6cyY0bNzh37hxRUVH4
-      +vqSlJSk9Ofj40N7e7uSbmpqIiEhgYSEBLKysoY8kpg8eTJpaWnodDoaGxsxm81MmDABQAmN
-      vnDhAtnZ2ZjNZoxGI/39/TQ0NLBnzx46OjoICQkBYPr06YSHh3Pw4EGlzfjx47Hb7Xz77bcU
-      FRXR09NDeHg4AHq9HpPJxMcff0xubi7V1dVYLBZeeeUVpe+oqCj8/PxITEykpaWFiIgI0tPT
-      iYiIuOV2b7IsU1paypUrV2hubiYhIQGA559/ntzcXHbt2sW8efNISEjAx8eHGzducPXqVbZt
-      24bFYqGtrQ2TyYTdbmfs2LGK3J/85Cfk5eWxc+dO3nrrLZ577jmMRiNms5nm5mYKCwsJCgrC
-      YrGg0WgICgoiOjqaiIgIamtraW9vR6vVil//AsEjxG0dwNy5c/n5z38OOAxTWFgYixYtwsPD
-      A29vb0pKSvDz8wMgOTmZffv2sXDhQjw9PTEYDKxYsYKbN29iMpmGyPby8qKpqYlz585hNpvR
-      6XTk5OSwdu1agoOD6ejoIDMzk5qaGqqqqvjkk09YvHixsjiSO5GRkVRXV1NWVob6vXZkZCQF
-      BQVMnDiR5uZmPDw8iIqKYu7cuQQGBmK326mvr3eRNXHiRLZu3UpcXBwajYZx48aRkZFBYmIi
-      HR0dAEiSxNSpU9m+fTuvvfYaFRUVdHV1ERoa6jLGy5cvc/78efz9/UdyPejr66O0tJR169Yp
-      7w8Al/P8+uuv09HRQUNDA0ajkcDAQPLy8ujr6yMkJISuri5OnjzJlClTiI2Npa+vj61btzJ1
-      6lRCQkLo7OzEy8uLhoYGLly4QENDA8HBweTm5vLVV18Bjjucs2fPEh0dzfjx44mMjCQzM5OW
-      lpYRjUMgEDz43PIdAEBAQACRkZGAw+BlZGRw7NgxmpubmTx5Mj4+PowfPx69Xk9ycjKNjY2U
-      lZWRnp7O1KlT+fjjj7FYLEyePBm9Xk9cXBx6vR6DwUB8fDx+fn6UlpaSkZGBTqfD39+f1NRU
-      iouLsdvtPPHEE5jNZg4dOsTkyZOZP38+kiQRExODr68vYWFhBAYGotFoSEtLIzU1lWPHjqHT
-      6TCbzQQGBpKRkcGNGzcoLy8nPT2d1NRUZsyYQUlJCfX19aSlpWE0GomJicHHxwedTsesWbMw
-      GAz85S9/ISYmhqeffppTp05RVVVFcnIywcHBAISEhCBJEnPmzMFoNJKcnExMTAwAJpMJk8mE
-      p6cnn3/+ORkZGXh7exMfHw9AbGwsBoNBOdfO9wFarZYxY8ZQXFxMamoqZrOZkJAQTCYT/v7+
-      hIaGMnHiRLy9vTl//jzLli0jPT2dY8eO0d7ezqRJk5RHYC0tLaSkpCBJkuIUPD09+fGPf0xA
-      QAAajYYzZ86waNEiqquruXbtGlOmTGHChAnExcVRVlZGf38/K1asoKKigvLychISEpS7IIFA
-      cG/o6urCbrdjs9nu6d8DOQ1UcGsqKyt5++23sdlspKSk8PLLL4+2SgKB4C7T09NzXx63Cgcg
-      EAgEDxj3ywGM6lIQvb09dLTf+3n5AoFA4MTb4Iuvr3G01XggGFUH0Nbawvl978PVy0jSwI2I
-      BJKEMkHVGRCskRxlSrnkSLqkVfmSqr5LXY2qfCAPjWsbSXItv1V/7n25t1PLdZeBW5shsgEk
-      ebCuCuWWTVKnZZcyWVWOqr6M7JJ2ryur5d+q7m31GOhnSCC3fNu2rnq49jtcO4eejkIZkGVp
-      4HNwDDKSIy1Lg/nOeqjqy6p2sqqts70ix12GezvpFp9uxypZIGFX5YOELEvY1eOTcaTd+0Kl
-      jzw0X32Cnfmo5LpeHWc95/FA2u2L5NRZ/TlYR1LVcZOrGi9KW1e57uWu+jj7Ga4v1dhkXOQO
-      6jBY56fpM0mbNA3BKDsAAH1PD/LNNoeBB8VIuxtljdOgDmNsJc1gO6cxVfLcja0GpS+lTDu0
-      L0njqo+6L/XXViMNpocz5JLbn+IEtK7lGlTjU/oexgG4G0SVwZTB9Z/f3XFIgy1lBvsZ3gG4
-      Hg1r5G+jk7sDUJt/dZnLMTjGrEYlWz02VwPvOLarjTRgR+Mwnna1sR80rs66NlkC+0Abp7Ed
-      MMSOvEFH4jTWdqdiKoUGHY3KiCuOSXIx5ING35mvGoukwTZwchx9OXUaqC/hItvZ1qU/1Qkc
-      dAoqZ3Abw+50fs7+3Q27uxxHvsatTFVXHtTL1XkMZ8TVDkJ1nZ3nWNXXEEekcrxqBh3AUAf1
-      uHPH5aCdy4hu2bKFtrY2l7L+/n4++OAD9uzZg81mAxzz7jdu3EhNTQ3g2IRg165dWK1WZFnm
-      1KlTiNcOAoHgQcBms3H06FFlqRubzUZhYSEFBQVKXk1NDRs3buTChQtD2n/66ads2bJFWWKm
-      ra2NrVu3UlxcjCzLtLW1kZ+fz6VLlxRZ7nZ0NLmjA3BGtebm5rJ+/XqXsvz8fJKSkhg/fjw7
-      d+6ks7OTgoICVq9ezY4dO+jq6uLo0aPMnj2b/fv3c+nSJWpra2+50JtAIBDcL2w2G7/97W85
-      evSosvduQUEBMTExJCcnk5+fT3d3Nzt27GD16tV88MEH3Lx5U2lfXl5OdXU1eXl5bNiwAVmW
-      2bBhA4sXL6a+vp6zZ8+ye/dulixZwt69e7HZbBw+fHjEMUH3gzs6gJMnT7J8+XJCQ0Px8fFR
-      funLskxrayuTJk0iIyODlpYWzp07x7x58/Dz8+PJJ5+ksrISLy8vgoOD6erqoqioiNmzZ9PZ
-      2XnPByYQCAS3Q6vV8stf/lJZPQDgypUrTJ06lbS0NNra2qiqqmLWrFn4+fkxb948l4UonbYx
-      JCSEMWPGYLVaMRgMhIWFsXz5ck6dOkV/fz/+/v54eHhw9OhRFixYwNWrV0djuMNyRwdgtVrx
-      8fEBwNvbG6vVOthYM9jcGWzkrOvj40NPTw/R0dFs2rSJoKAgAgMDOXDgAL///e/v+uqiAoFA
-      8F2RJEl5QqHVarFYLPj6+gLg6+vrskJxd3e3Yu8MBgPt7e14e3sraavVyty5c3nnnXcYO3Ys
-      XV1d7Nu3j8LCQqqrq+/zyIbnjg4gPDycuro6ZFmmvb3dJXq1r6/PJVrNZDIpi5zV1dVhMplY
-      smQJL774ItevX0er1bJ06VKSkpJobW29Z4MSCASCvwdZlhW71tvbS0REBHV1dQBcvHjRZVkb
-      k8mklLW2thIaGkp7ezuyLFNfX09YWBgTJ07kpZdeorGxkczMTJKTk1m2bBlVVVWjMj537jgL
-      KCcnh9dff53IyEhiY2ORJIk33niDNWvWkJ2dzW9+8xtkWSYvL4/ExEQKCwtpa2ujubmZZ555
-      BlmW2blzJ0uXLsVisbBz505sNht5eXlca2m6H2MUCASCIbS2tlJYWMjp06fp7+9n5syZ5OTk
-      8Lvf/Q6tVktOTg6xsbEUFBSwZcsWGhsbycvL48iRI4wbN4758+fz2muvERkZSUREhLJu2Pr1
-      62lqamLNmjWA41FRfHw8UVFR7Nixg5qaGp599tlRHr2DEUUC9/f3Y7FYXDYkduK8JXLe+jjv
-      FPz9/ZEkCVmWsdvtyg5eVqsVnU6HVqul+colav/4B+RLNQ/XNFBF5sA0UElVD1W/Tn3ENNBH
-      chqoe/yAXSn/jtNAUU0DlVU6qaZTukwDlSVku5gGOtJpoP8+5Ukm3SYOoLu7G1mWlacd7jZN
-      jc1mo7OzE6PRqJTduHEDg8Gg7Ahos9nQaDRIkoTNZqO/v/+OUb4PVCSwh4fHsMYfBg2/E0mS
-      CAgIcEmrt29039eyR68Hv4CHOxDMWVUeKFNZKWfekEAw2bWvIbIVgar0oNhB3ZW07FLm9v+t
-      1H9UAsEOHvmajMnhRJj8Bg0prg7gfgeCgTTgvxxKa1QG0ilDGqirUYzZXQgEwxEb4IghGGEg
-      2JCrM2iMlUAwids6ClT9qr+ortdrUM5QA+8q173cVR9nP8P19bcFgg0dvSt3smlqnIs3qjEa
-      jUPqqI/vtJ3t/WRUA8ECAkOYuPKF0VRB8JASELqH8LHTiBpYfVUgGCneBt/RVuGBQSwGJxAI
-      BA8Y9+sR0B1nAQkEAoHg0UQ4AIFAIHhMEQ5AIBAIHlOEAxAIBILHFOEABAKB4DFFOACBQCB4
-      TBk2DqCy4gvaVYseCQQCgeDuIvX3MmPGvFHV4ZaBYBFxE25VJBAIBILvSGtdzWirIB4BCQQC
-      weOKcAACgUDwmCIcgEAgEDym3NYByLLMq/+6hrf+87+U9L/900tseOt/RtzBtZYW/uNffoHN
-      ZqO7q4tXf7GG3p7e76a1QCAQCL4zd1wN1Gq10nr9Or29vVy90ozey4sui4Xenh7+VLiX6y3X
-      mDF7FpMy0jm4dx+Wgf1+V6x+Fr1eT1BwMOMT4vmkqIi21jZmz52LzlNH0eEjVF+4wIIli4lL
-      SODQvv1cvnSJSRnpfG/2bP784WHMEyZQ+/XXzF+44J6fCIFAIHjcGNEjoLT0dMrPlnGqtJTp
-      M78HODY5iEuI5+m8JWxavwFZlvno0IdMnTaNzpud/PnDw4BjLe1Vz/2QA3v28sXJk2Qvepry
-      si+p+Oorlq96hvfefgeA8AgTud//PgX5O+ju7uboh4fZvmULoeFh92joAoFA8Hgzov0Aps38
-      Hh/u2097WzvPPPdDLlRW0tHRwYf7DxAUHETnzZuAYyNk84QkrFYrJ0+cUNobx4whI/MJIqKi
-      8PDwoO7iRZqvXKHwjwUAXG+5RtGRj/D3D6Crq4uebisajYZfvPof+Pn53YNhCwQCgWBEdwBR
-      0dHUXbyIj5+vspvN+YoKIqIiycrJVrY+6+3tofbrryk6coSERLOLDG+DQdlpJ3ZcLL6+fix7
-      5gfkrVhOU+Nl9J56FuYuxsvLsQa2JEn4+PjcrXEKBAKBwA3tunXr1rlntlxtROfnDzgMcbzZ
-      jJ+fkUkZ6QQGBeHl5c3UaZlUllfQefMmKZPSSEhK5ND+P2Gz2YhPTCQrO9tl/0wJCAsPxz8g
-      gNCwMDQaDaf+egJfPz+emDGd+ro6mi43Mik9nfjERDx0OuLNCUP24BQIBIJHge6OVkym6GHL
-      bDab8sP6XjLsjmCVFV9giIj9mwTZ7XZe+cd/5r/fXX+3dBMIBIJHlta6GjLSZwxb9tDtCKbR
-      aITxFwgEgocIEQgmEAgEjynCAQgEAsFjyojeMjQ3XeHEp5+i1+vJfnohHjodJ0+UUn/xWxYs
-      XswYf3+uNDVR+uln6L28yF64AK2HB//32V+pr6vjienTiEtIuNdjEQgEAsHfwB3vAGRZpvj4
-      cbJysokZF8vhAwepLK/gckMDT+XkkL9lK7LdTsnxT3gqJ5vosTEcOXiIs198gbfBm7zl3+dA
-      4V7sdvt9GI5AIBAIRsod7wCckbyyLHO2+SoBQYGUnT7Nsh+sxMfXF4PBgF2WlTotA3WmZGYC
-      0HnzJrIsi+mcAoFA8IAxoncAfX19bNu4CavVypynnsJqteJtMADg5eVFT0+PUqe3p4cns7IA
-      OH/uHBvf2cDzL/5UOACBQCB4wLjjHYAsy/zvps3MnT+feLPjOX5IaCiNly4RGR1NR0cH3t7e
-      bHn3D2Rlz1ee9TfU11Ny7Dgvr31FiR4WCAQCwYPDiBxA2enT6HQ6/lpSQnJKCk8+lcWm9RsI
-      Cw8nOiYGu91O2ekz6HQ6PisuITk1lW9qaujp6WHH1veRJIln/+E5PO9DYINAIBAIRsbfHQls
-      s9nosljwMxrvlW4CgUDwyPJQRwJrtVph/AUCgeAhRgSCCQQCwWPK/wOAQ/WJcyQ2eQAAAABJ
-      RU5ErkJggg==
+      +ha///u/zy9+8Qu6u7vZsWMHpmmyZs2a/7+9M4+K6koT+O8VFEsBJTsUmyhQIAIKEtRWo0RB
+      o4K22jGeznT6dDr9R89MMtNmchfQ6gAAEtxJREFUnDM5fU77Ty8zSSaZdDQdtzi4NFHUVqOx
+      ieZAJy2jCUoCokBCWBRElEUoKJaqN38U9XhVoJJuFZf7O4dTdbfvfvdV8X1137vfvRQUFJCU
+      lERAQACZmZm4ubkBUF5eTnZ2NhqNBjc3N3p6enjjjTdYu3YtpaWlfPbZZ5SUlHDt2jUqKiqo
+      qqpi0aJFbNu2je7ubn7961+Tk5NDbGwstbW1fPnll1RWVrJv3z5ycnLQ6/WKMVyxYgWdnZ2c
+      OnWKkpISrl+/TkZGBrt27aK0tJTjx4+zdu1aJkyYwJtvvsns2bPx8/Nj3759AOh0Ovbu3YvJ
+      ZKKgoIDi4mJlmVVZWRl1dXUkJSURHBzM/PnzlfHMmjWLc+fOUVdXd8vr7urqypo1a2htbaWo
+      qIiysjJ+9atfodPpOHfuHB999BG5ubkUFhbS2dnJm2++yY9+9CNOnz5NbW0t8fHxxMfHM2PG
+      DNuHrNGQmZnJCy+8wM6dO3F3dyc5OZmQkBDmz5+PRqMhJiaGNWvW8O677yprhVNTU0lMTOS9
+      997DaDQSFxfH+++/f5e+egKBYLy57c3wzz//nN7eXlavXk18fDzNzc3k5eXR1tZGa2srkiSx
+      YcMGEhISePXVV/nZz35GdHQ033zzDR0dHWzbtg2r1UpLSwuSJDFnzhxu3rzJhQsXiIiIwNvb
+      m4SEBKU/Ly8vOjo6lHRzczNxcXHExcWRmZk54pbE9OnTSUlJQavV0tTUhNFoZMqUKQBKaPSl
+      S5fIysrCaDSi1+sZHByksbGR/fv309nZSVBQEACzZs0iNDSUI0eOKG0mT56M1Wrl22+/pbCw
+      kL6+PkJDQwFwd3fHYDDw8ccfk5OTQ3V1NSaTiVdeeUXpOyIiAh8fH+Lj42ltbSUsLIzU1FTC
+      wsJuedybLMuUlJRw9epVWlpaiIuLA+D5558nJyeHvXv3snDhQuLi4vDy8uLmzZtcu3aNnTt3
+      YjKZaG9vx2AwYLVamThxoiL3Jz/5Cbm5uezZs4e33nqL5557Dr1ej9FopKWlhYKCAgICAjCZ
+      TGg0GgICAoiMjCQsLIza2lo6OjpwcXERv/4FgkeI2zqABQsW8POf/xywGaaQkBCWLl2Kq6sr
+      np6eFBcX4+PjA0BiYiIHDx5kyZIluLm5odPpWL16NV1dXRgMhhGyPTw8aG5u5sKFCxiNRrRa
+      LdnZ2WzYsIHAwEA6OzvJyMigpqaGqqoqPvnkE5YtW6ZsjuRMeHg41dXVlJWVoX6uHR4eTn5+
+      PlOnTqWlpQVXV1ciIiJYsGAB/v7+WK1WGhoaHGRNnTqVHTt2EBMTg0ajYdKkSaSlpREfH09n
+      ZycAkiSRnp7Orl27eO2116ioqKCnp4fg4GCHMV65coWLFy/i6+s7ls+DgYEBSkpK2Lhxo/L8
+      AHC4zq+//jqdnZ00Njai1+vx9/cnNzeXgYEBgoKC6Onp4cyZM8yYMYPo6GgGBgbYsWMH6enp
+      BAUF0d3djYeHB42NjVy6dInGxkYCAwPJycnhq6++AmwznPPnzxMZGcnkyZMJDw8nIyOD1tbW
+      MY1DIBA8+NzyGQCAn58f4eHhgM3gpaWlcfLkSVpaWpg+fTpeXl5MnjwZd3d3EhMTaWpqoqys
+      jNTUVNLT0/n4448xmUxMnz4dd3d3YmJicHd3R6fTERsbi4+PDyUlJaSlpaHVavH19SU5OZmi
+      oiKsVitPPPEERqORo0ePMn36dBYtWoQkSURFReHt7U1ISAj+/v5oNBpSUlJITk7m5MmTaLVa
+      jEYj/v7+pKWlcfPmTcrLy0lNTSU5OZnZs2dTXFxMQ0MDKSkp6PV6oqKi8PLyQqvVMnfuXHQ6
+      HX/5y1+Iiori6aef5uzZs1RVVZGYmEhgYCAAQUFBSJLE/Pnz0ev1JCYmEhUVBYDBYMBgMODm
+      5sbnn39OWloanp6exMbGAhAdHY1Op1Outf15gIuLCxMmTKCoqIjk5GSMRiNBQUEYDAZ8fX0J
+      Dg5m6tSpeHp6cvHiRVauXElqaionT56ko6ODadOmKbfAWltbSUpKQpIkxSm4ubnx4x//GD8/
+      PzQaDefOnWPp0qVUV1dz/fp1ZsyYwZQpU4iJiaGsrIzBwUFWr15NRUUF5eXlxMXFKbMggUBw
+      b+jp6cFqtWKxWO7p3wO5DFRwayorK3n77bexWCwkJSXx8ssvj7dKAoHgLtPX13dfbrcKByAQ
+      CAQPGPfLAYzrVhD9/X10dtz7dfkCgUBgx1Pnjbe3frzVeCAYVwfQ3tbKxYPvw7UrSNLQREQC
+      SUJZoGoPCNZItjKlXLIlHdKqfElV36GuRlU+lIfGsY0kOZbfqj/nvpzbqeU6y8CpzQjZAJI8
+      XFeFMmWT1GnZoUxWlaOqLyM7pJ3rymr5t6p7Wz2G+hkRyC3ftq2jHo79jtbOpqetUAZkWRp6
+      HR6DjGRLy9Jwvr0eqvqyqp2samtvr8hxluHcTrrFq9N7lSyQsKryQUKWJazq8cnY0s59odJH
+      HpmvvsD2fFRyHT8dez37+6G00xfJrrP6dbiOpKrjJFc1XpS2jnKdyx31sfczWl+qsck4yB3W
+      YbjOT1PnkDJtJoJxdgAA7n19yF3tNgMPipF2Nsoau0EdxdhKmuF2dmOq5DkbWw1KX0qZy8i+
+      JI2jPuq+1F9bjTScHs2QS05/ihNwcSzXoBqf0vcoDsDZIKoMpgyO//zOjkMabikz3M/oDsDx
+      3ahG/jY6OTsAtflXlzm8B9uY1ahkq8fmaOBt761qIw1Y0diMp1Vt7IeNq72uRZbAOtTGbmyH
+      DLEtb9iR2I211a6YSqFhR6My4opjkhwM+bDRt+erxiJpsAxdHFtfdp2G6ks4yLa3dehPdQGH
+      nYLKGdzGsNudn71/Z8PuLMeWr3EqU9WVh/VydB6jGXG1g1B9zvZrrOprhCNSOV41ww5gpIN6
+      3LnjdtD2bUS3b99Oe3u7Q9ng4CAffPAB+/fvx2KxALZ191u2bKGmpgawHUKwd+9ezGYzsixz
+      9uxZxGMHgUDwIGCxWDhx4oSy1Y3FYqGgoID8/Hwlr6amhi1btnDp0qUR7T/99FO2b9+ubDHT
+      3t7Ojh07KCoqQpZl2tvbycvL4/Lly4osZzs6ntzRAdijWnNycti0aZNDWV5eHgkJCUyePJk9
+      e/bQ3d1Nfn4+69atY/fu3fT09HDixAnmzZvHoUOHuHz5MrW1tbfc6E0gEAjuFxaLhd/+9rec
+      OHFCOXs3Pz+fqKgoEhMTycvLo7e3l927d7Nu3To++OADurq6lPbl5eVUV1eTm5vL5s2bkWWZ
+      zZs3s2zZMhoaGjh//jz79u1j+fLlHDhwAIvFwrFjx8YcE3Q/uKMDOHPmDKtWrSI4OBgvLy/l
+      l74sy7S1tTFt2jTS0tJobW3lwoULLFy4EB8fH5588kkqKyvx8PAgMDCQnp4eCgsLmTdvHt3d
+      3fd8YAKBQHA7XFxc+OUvf6nsHgBw9epV0tPTSUlJob29naqqKubOnYuPjw8LFy502IjSbhuD
+      goKYMGECZrMZnU5HSEgIq1at4uzZswwODuLr64urqysnTpxg8eLFXLt2bTyGOyp3dABmsxkv
+      Ly8APD09MZvNw401w83twUb2ul5eXvT19REZGcnWrVsJCAjA39+fw4cP8/vf//6u7y4qEAgE
+      fy+SJCl3KFxcXDCZTHh7ewPg7e3tsENxb2+vYu90Oh0dHR14enoqabPZzIIFC3jnnXeYOHEi
+      PT09HDx4kIKCAqqrq+/zyEbnjg4gNDSU+vp6ZFmmo6PDIXp1YGDAIVrNYDAom5zV19djMBhY
+      vnw5L774Ijdu3MDFxYUVK1aQkJBAW1vbPRuUQCAQ/C3IsqzYtf7+fsLCwqivrwegrq7OYVsb
+      g8GglLW1tREcHExHRweyLNPQ0EBISAhTp07lpZdeoqmpiYyMDBITE1m5ciVVVVXjMj5n7rgK
+      KDs7m9dff53w8HCio6ORJIk33niD9evXk5WVxW9+8xtkWSY3N5f4+HgKCgpob2+npaWFZ555
+      BlmW2bNnDytWrMBkMrFnzx4sFgu5ublcb22+H2MUCASCEbS1tVFQUEBpaSmDg4PMmTOH7Oxs
+      fve73+Hi4kJ2djbR0dHk5+ezfft2mpqayM3N5fjx40yaNIlFixbx2muvER4eTlhYmLJv2KZN
+      m2hubmb9+vWA7VZRbGwsERER7N69m5qaGp599tlxHr2NMUUCDw4OYjKZHA4ktmOfEtmnPvaZ
+      gq+vL5IkIcsyVqtVOcHLbDaj1WpxcXGh5eplav/4B+TLNQ/XMlBF5tAyUElVD1W/dn3EMtBH
+      chmoc/yAVSn/O5eBoloGKqt0Ui2ndFgGKkvIVrEMdKzLQP99xpNMu00cQG9vL7IsK3c7nG2a
+      GovFQnd3N3q9Xim7efMmOp1OORHQYrGg0WiQJAmLxcLg4OAdo3wfqEhgV1fXUY0/DBt+O5Ik
+      4efn55BWH9/ofK5ln7s7+Pg93IFg9qryUJnKStnzRgSCyY59jZCtCFSlh8UO666kZYcyp/9v
+      pf6jEgh25PjXpE0PJczgM2xIcXQA9zsQDKQh/2VTWqMykHYZ0lBdjWLM7kIgGLbYAFsMwRgD
+      wUZ8OsPGWAkEk7ito0DVr/qL6vh5DcsZaeAd5TqXO+pj72e0vr5bINjI0TtyJ5umxr55oxq9
+      Xj+ijvr9nY6zvZ+MayCYn38QU9e8MJ4qCB5S/IL3EzpxJhFDu68KBGPFU+c93io8MIjN4AQC
+      geAB437dArrjKiCBQCAQPJoIByAQCASPKcIBCAQCwWOKcAACgUDwmCIcgEAgEDymCAcgEAgE
+      jymjxgFUVnxBh2rTI4FAIBDcXaTBfmbPXjiuOtwyECwsZsqtigQCgUDwd9JWXzPeKohbQAKB
+      QPC4IhyAQCAQPOLYN+V0ZtwPhRcIBALBvUV90I2a284AZFnm1X9dz1v/+V9K+t/+6SU2v/U/
+      Y+74emsr//Evv8BisdDb08Orv1hPf1//d1RfIBAIBHebO84AzGYzbTdu0N/fz7WrLbh7eNBj
+      MtHf18efCg5wo/U6s+fNZVpaKkcOHMQ0dN7v6nXP4u7uTkBgIJPjYvmksJD2tnbmLViA1k1L
+      4bHjVF+6xOLly4iJi+PowUNcuXyZaWmpfG/ePP784TGMU6ZQ+/XXLFqy+J5fCIFAIHjcGNMz
+      gJTUVMrPl3G2pIRZc74H2A45iImL5enc5WzdtBlZlvno6Iekz5xJd1c3f/7wGGCbeqx97occ
+      3n+AL86cIWvp05SXfUnFV1+xau0zvPf2OwCEhhnI+f73yc/bTW9vLyc+PMau7dsJDg25R0MX
+      CASCx5sxPQOYOed7fHjwEB3tHTzz3A+5VFlJZ2cnHx46TEBgAN1dXYDtIGTjlATMZjNnTp9W
+      2usnTCAt4wnCIiJwdXWlvq6OlqtXKfhjPgA3Wq9TePwjfH396Onpoa/XjEaj4Rev/gc+Pj73
+      YNgCgUAgGNMMICIykvq6Orx8vJXTbC5WVBAWEU5mdpZy9Fl/fx+1X39N4fHjxMUbHWR46nTK
+      STvRk6Lx9vZh5TM/IHf1KpqbruDu5s6SnGV4eNj2wJYkCS8vr7s1ToFAIBA44bJx48aNzpmt
+      15rQ+vgCNkMcazTi46NnWloq/gEBeHh4kj4zg8ryCrq7ukialkJcQjxHD/0Ji8VCbHw8mVlZ
+      Dk+dJSAkNBRfPz+CQ0LQaDSc/etpvH18eGL2LBrq62m+0sS01FRi4+Nx1WqJNcaN+uRaIBAI
+      HnZ6O9swGCJHLbNYLMoP63vJqCeCVVZ8gS4s+jsJslqtvPKP/8x/v7vpbukmEAgEjyxt9TWk
+      pc4eteyhOxFMo9EI4y8QCAQPESISWCAQCB5ThAMQCASCx5QxPWVoab7K6U8/xd3dnaynl+Cq
+      1XLmdAkNdd+yeNkyJvj6crW5mZJPP8Pdw4OsJYtxcXXl/z77Kw319TwxayYxcXH3eiwCgUAg
+      +A7ccQYgyzJFp06RmZ1F1KRojh0+QmV5BVcaG3kqO5u87TuQrVaKT33CU9lZRE6M4viRo5z/
+      4gs8dZ7krvo+hwsOjLoRkUAgEAjGjzvOAOyRvLIsc77lGn4B/pSVlrLyB2vw8vZGp9NhlWWl
+      TutQnRkZGQB0d3Uhy7JYzikQCAQPGGN6BjAwMMDOLVsxm83Mf+opzGYznjodAB4eHvT19Sl1
+      +vv6eDIzE4CLFy6w5Z3NPP/iT4UDEAgEggeMO84AZFnmf7duY8GiRcQabffxg4KDabp8mfDI
+      SDo7O/H09GT7u38gM2uRcq+/saGB4pOneHnDK0r0sEAgEAgeHMbkAMpKS9Fqtfy1uJjEpCSe
+      fCqTrZs2ExIaSmRUFFarlbLSc2i1Wj4rKiYxOZlvamro6+tj9473kSSJZ//hOdzuQ2CDQCAQ
+      CMbG3xwJbLFY6DGZ8NHr75VuAoFA8MjyUEcCu7i4COMvEAgEDzEiEEwgEAgeU/4fBC/7iGde
+      c8gAAAAASUVORK5CYII=
     </thumbnail>
   </thumbnails>
 </workbook>
