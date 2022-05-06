@@ -12,7 +12,7 @@ import pandas as pd
 #Of the three lists of files below, only one can be used/active at a time.
 #files contains a list of input files produced by DF_OUTPUT_EDIT.py
 #The files list should include only files with coincidences calculated using 
-#the same key1 country in DF_OUTPUT_EDIT.py.
+#the same key1 country_of_interest in DF_OUTPUT_EDIT.py.
 #Files should span the time period that the user is interested in tracking 
 #coincidences accross.
 #files lists with Russia, China, and The US as the key1 country from 1992-2022 

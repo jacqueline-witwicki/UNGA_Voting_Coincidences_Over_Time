@@ -7,10 +7,16 @@ Created on Wed Apr 20 15:32:56 2022
 """
 
 
-#NOTE: THE YEAR ASSOCIATED WITH THE INPUT FILE, USED IN THE COINCIDENCE FUNCTION 
-#IN LINE 103, AND USED TO LABEL THE OUTPUT FILE SHOULD ALL BE THE SAME.
+#NOTE: THE YEAR ASSOCIATED WITH THE INPUT FILE, USED IN THE year_of_interest
+#VARIABLE IN LINE 15, AND USED TO LABEL THE OUTPUT FILE SHOULD ALL BE THE SAME.
 
 import pandas as pd
+
+year_of_interest="2022"
+country_of_interest="UNITED STATES"
+
+#The user should input their year of interest and key1 country of interest in
+#the above variables.
 
 #The input file should contain an output from text_parser.py. This input can be
 # changed based on your analysis.
@@ -26,7 +32,7 @@ df=pd.read_csv("2022_RAW_COIN.csv")
 vote_list=df.to_dict("records")
 
 #The function getList produces a list of keys from a given dictionary. 
-#This is used to produce a list of countries in line 25.
+#This is used to produce a list of countries in line 41.
 #This list of countries is used in a loop below that calculates voting 
 #coincidences for one member state and all other countries.
 
@@ -129,13 +135,13 @@ def coincidence(key1,key2,year):
 #%%
 
 for country in countries:
-   run=coincidence("UNITED STATES",country,"2022")
+   run=coincidence(country_of_interest,country,year_of_interest)
    
 #^The above loop calculates coincidences for each country in the countries list
-# with the United States.
+# with the country of interest.
 #To calculate coincidences between all countries in the list and any other
-# country, UNITED STATES can be replaced with that country's name, as it 
-#appears in the countries list.
+# country, country_of_interest, at the top of the code, can be replaced with
+# that country's name, as it appears in the countries list.
 #My outputs for this project focus on UNITED STATES, RUSSIAN FEDERATION, 
 #and CHINA.
 

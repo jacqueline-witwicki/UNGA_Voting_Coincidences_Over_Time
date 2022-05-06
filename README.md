@@ -15,8 +15,8 @@
 > The results of this repository can be used to gain a better understanding of the relationships between member states in the United Nations General Assembly (UNGA).
 > The results can also be used to determine how ideologically aligned various member states are.
 > For example, as of 6 May 2022, the only resolutions that have come to a vote in 2022 have been in response to Russia's invasion of Ukraine.
-> Looking at voting coincidences in 2022, you can understande the feelings of all UNGA members states, regarding the conflict.
-> These relationships can be modeled with maps,line graphs, bar charts, and various other visualization tools.
+> Looking at voting coincidences in 2022, you can understand the feelings of all UNGA member states, regarding the conflict.
+> These relationships can be modeled with maps, line graphs, bar charts, and various other visualization tools.
 > I created a Tableau Public page to model the result of using this repository to calculate voting coincidences for The United States, China, and Russia with all other member states, over time.
 > Explore the results on Tableau [HERE.](https://public.tableau.com/views/VotingCoincidencesintheUnitedNationsGeneralAssemblyOverTime/VotingCoincidenceswithKeyUNGAMemberStates?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link "Jacqueline's Tableau")
 
@@ -51,7 +51,7 @@
 1. text_parser.py ->   
    * This file scrapes text from the United Nations Digital Library website.
 
-   * The user inserts the year that they are interested in gathing voting data from in line 36.
+   * The user inserts the year that they are interested in gathering voting data from in year_of_interest variable at the top of the code.
 
    * This file returns a CSV file with the naming scheme  (*YEAR*)_RAW_COIN.csv, which contains raw voting data on all resolutions for the given year.
 
@@ -61,11 +61,11 @@
 2. DF_OUTPUT_EDIT.py  ->    
    * This file uses the raw voting data produced in text_parser.py and stored in (*YEAR*)_RAW_COIN.csv to calculate voting coincidences between one member state and all other member states, for the given year.
   
-   * The user inserts the year that they are calculating voting coincidences for in line 103. This year should also be reflected in the inpute file and naming of the output file.
+   * The user inserts the year that they are calculating voting coincidences for in the year_of_interest variable at the top of the code. This year should also be reflected in the input file and naming of the output file.
    
-   * The user inserts the country they want to calculate coincidences for, against the rest of all UNGA member states, as key1, in line 103. This selection should be reflected in the name of the output file.   
+   * The user inserts the country they want to calculate coincidences for, against the rest of all UNGA member states, as key1, using the country_of_interest variable at the top of the code. This selection should be reflected in the name of the output file.   
    
-   * This file returns a CSV file with the naming scheme (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv , which contains UNGA member countries, their voting coincidence with the key1 country as a decimal, the year associated with the input file, and their three digit numeric country code.
+   * This file returns a CSV file with the naming scheme (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv, which contains UNGA member countries, their voting coincidence with the key1 country as a decimal, the year associated with the input file, and their three digit numeric country code.
    
    * The output of this code is an input of For_Map_Joiner.py  
   
@@ -103,7 +103,7 @@
 4. Voting Coincidences in the United Nations General Assembly Over Time.twb  ->    
    * This Tableau file is the result of joining three different (*key1 COUNTRY*)_For_Map.csv files for (The United States, China, and Russia with wourld_countries_2020.shp, in Tableau.
    
-   * The files are joined on the the three digit country codes for each country. 
+   * The files are joined on the three digit country codes for each country. 
    
    * The Tableau Dashboard in the files contains three maps and three bar graphs, visualizing coincidences over time for the key1 countries associated with the input files.
    

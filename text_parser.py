@@ -5,13 +5,16 @@ Created on Mon Apr 18 16:45:24 2022
 
 @author: jacquelinewitwicki
 """
-#NOTE: THE YEAR USED IN THE EACHYEAR FUNCTION IN LINE 36 AND USED TO LABEL THE 
-#OUTPUT FILE SHOULD ALL BE THE SAME.
+#NOTE: THE YEAR USED IN THE year_of_interest VARIABLE IN LINE 15 AND THE YEAR 
+#USED TO LABEL THE OUTPUT FILE SHOULD ALL BE THE SAME.
 
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+year_of_interest="2022"
+
+#^INSERT THE TARGET YEAR YOU WANT TO PULL VOTE DATA FROM ABOVE 
 
 def eachyear(year):
     
@@ -38,9 +41,8 @@ def eachyear(year):
         title=str(title)
         title_list.append(title)
     return title_list
-    
-codes=eachyear("2022")
-#^INSERT THE TARGET YEAR YOU WANT TO PULL VOTE DATA FROM IN THE ABOVE FUNCTION
+
+codes=eachyear(year_of_interest)    
 
 #%%
 def eachres(java):
@@ -115,7 +117,7 @@ fix_names={
 #Using the eachres function, defined abouve, to build a dataframe containing 
 #vote data for each resolution, the loop concatenates these dataframes.
 #The product of this loop is a dataframe that contains each countries vote for 
-#the year given to the eachyear fuction in codes, line 36.
+#the year given to the eachyear fuction in codes, line 15.
 
 df = pd.DataFrame(columns=["Country"])
 
