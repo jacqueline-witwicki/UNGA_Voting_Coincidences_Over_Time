@@ -8,7 +8,7 @@
 1. text_parser.py ->   
 Reads a copied vote count from the UN digital library and returns a list of Y,N,A, and Xs. This list can then be copied into a spreadsheet.
 
-⋅⋅⋅Once this has been done for all relevant resolutions, filling the spreadsheet. The spreadsheet can be copied into its own txt file and run through VOTE_CNTR.py⋅⋅
+   Once this has been done for all relevant resolutions, filling the spreadsheet. The spreadsheet can be copied into its own txt file and run through VOTE_CNTR.py  
 
 ⋅⋅⋅I am currently writing a web scraper that will do this by year, not resolution. ⋅⋅
 
