@@ -1,6 +1,18 @@
 # UNGA_Voting_Coincidences_Over_Time
 ## A tool to analyze UNGA Voting coincidences between member states.
 
+### USER GUIDE
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### FILE BREAKDOWN
@@ -8,28 +20,26 @@
 #### PYTHON FILES:
     
 1. text_parser.py ->   
-   * Reads a copied vote count from the UN digital library and returns a list of Y,N,A, and Xs. This list can then be copied into a spreadsheet.
+   * This file scrapes text from the United Nations Digital Library website.
 
-   * Once this has been done for all relevant resolutions, filling the spreadsheet. The spreadsheet can be copied into its own txt file and run through VOTE_CNTR.py  
+   * The user inserts the year that they are interested in gathing voting data from in line 36.
 
-   * I am currently writing a web scraper that will do this by year, not resolution.  
+   * This file returns a CSV file with the naming scheme  (*YEAR*)_RAW_COIN.csv, which contains raw voting data on all resolutions for the given year.
 
-   * !!! For this code to work, you must copy the vote count for the resolution into the txt file that UNGA_READER.py is pulling from.  
+   * The output of this code is the input of DF_OUTPUT_EDIT.py
                     
    
 2. DF_OUTPUT_EDIT.py  ->    
-   * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
+   * This file uses the raw voting data produced in text_parser.py and stored in (*YEAR*)_RAW_COIN.csv to calculate voting coincidences between one member state and all other member states, for the given year.
   
-   * Returns voting coincidence, coincidence breakdowns, and absentee rates.  
+   * The user inserts the year that they are calculating voting coincidences for in line 103. This year should also be reflected in the inpute file and naming of the output file.
    
-   * !!! For this code to work, it must read a text file that contains UNGA_READER.py translated vote counts.  
+   * The user inserts the country they want to calculate coincidences for, against the rest of all UNGA member states, as key1, in line 103. This selection should be reflected in the name of the output file.   
    
-   * Each resolution must have it's own line in the txt file.  
+   * This file returns a CSV file with the naming scheme (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv , which contains UNGA member countries, their voting coincidence with the key1 country as a decimal, the year associated with the input file, and their three digit numeric country code.
    
-   * I reccomend copying UNGA_READER.py outputs into an Excel file and then copying the finished excel file, with all relevant resolutions, into a txt file for VOTE_CNTR.py to read.  
-   
-   * NOTE: THIS CODE WILL ONLY GIVE AN ACCURATE READ FOR YEARS THAT HAVE THE SAME 193 MEMBER STATE MAKE UP IN THE UNGA AS 2022. It could be edited to read data from other years.   
-
+   * The output of this code is an input of For_Map_Joiner.py  
+  
 
 3. For_Map_Joiner.py ->    
    * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
