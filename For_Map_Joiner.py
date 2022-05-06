@@ -72,7 +72,7 @@ for file in files:
     df = df.append(dfx)
 
 print(df)
-#df.to_csv("UNITED_STATES_For_Map.csv",index=True,header=True) 
+df.to_csv("UNITED_STATES_For_Map.csv",index=True,header=True) 
 
 #Above, df, containing country names, voting coincidences, the year, and country codes for the files in files is saved to a CSV file and printed.
 #This CSV file will be joined with the IPUMS shape file to produce color coded maps, based on coincidence.
