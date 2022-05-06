@@ -21,7 +21,7 @@
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
   </document-format-change-manifest>
-  <repository-location id='VotingCoincidencesintheUnitedNationsGeneralAssemblyOverTime' path='/workbooks' revision='1.8' />
+  <repository-location id='VotingCoincidencesintheUnitedNationsGeneralAssemblyOverTime' path='/workbooks' revision='2.0' />
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
     <preference name='ui.shelf.height' value='26' />
@@ -3830,21 +3830,11 @@
               <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' filter-group='3'>
-            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;GERMANY&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;INDIA&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;PAKISTAN&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
-            </groupfilter>
-          </filter>
           <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' filter-group='4'>
             <groupfilter function='level-members' level='[none:Year (CHINA_2_For_Map.csv1):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</column>
-            <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</column>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</column>
           </slices>
           <aggregation value='true' />
@@ -4063,21 +4053,11 @@
               <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' filter-group='3'>
-            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;GERMANY&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;INDIA&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;PAKISTAN&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
-            </groupfilter>
-          </filter>
           <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' filter-group='4'>
             <groupfilter function='level-members' level='[none:Year (CHINA_2_For_Map.csv1):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</column>
-            <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</column>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</column>
           </slices>
           <aggregation value='true' />
@@ -4185,8 +4165,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Longitude (generated)]' field-type='quantitative' max='4721558.010749815' min='-1987660.5379796338' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Latitude (generated)]' field-type='quantitative' max='7806469.5961355614' min='3037152.0055095037' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Longitude (generated)]' field-type='quantitative' max='5955575.5215627737' min='-1991151.3937386521' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Latitude (generated)]' field-type='quantitative' max='8455768.7717666738' min='2806755.5238339477' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='cell'>
             <format attr='text-format' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[attr:Coincidence (RUSSIAN_FEDERATION_For_Map.csv):qk]' value='p0.00%' />
@@ -4283,21 +4263,11 @@
               <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
             </groupfilter>
           </filter>
-          <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' filter-group='3'>
-            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;GERMANY&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;INDIA&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;PAKISTAN&quot;' />
-              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
-            </groupfilter>
-          </filter>
           <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' filter-group='4'>
             <groupfilter function='level-members' level='[none:Year (CHINA_2_For_Map.csv1):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</column>
-            <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</column>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</column>
           </slices>
           <aggregation value='true' />
@@ -4514,7 +4484,7 @@
             <format attr='background-color' value='#fefaf1' />
           </zone-style>
         </zone>
-        <zone h='14286' id='87' name='China Coincidence (2)' w='99170' x='484' y='86619' />
+        <zone h='14286' id='87' name='China Coincidence (2)' w='99170' x='484' y='86000' />
         <zone h='3381' id='89' mode='checkdropdown' name='China Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' type-v2='filter' w='23806' x='484' y='51429'>
           <zone-style>
             <format attr='border-color' value='#000000' />
@@ -4523,7 +4493,7 @@
             <format attr='background-color' value='#f0eae8' />
           </zone-style>
         </zone>
-        <zone h='14286' id='90' name='US Coincidence (2)' w='99862' x='554' y='71429' />
+        <zone h='14286' id='90' name='US Coincidence (2)' w='99862' x='484' y='71190' />
         <zone h='14286' id='91' name='Russia Coincidence (2)' w='99862' x='484' y='56333' />
         <zone h='3381' id='100' mode='checkdropdown' name='Russia Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]' type-v2='filter' values='database' w='23806' x='25052' y='51429'>
           <zone-style>
@@ -4538,8 +4508,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2150' minheight='2150' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='104' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='99238' id='103' param='vert' type-v2='layout-flow' w='98892' x='554' y='381'>
+            <zone h='100000' id='114' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99238' id='113' param='vert' type-v2='layout-flow' w='98892' x='554' y='381'>
                 <zone forceUpdate='true' h='2762' id='38' type-v2='text' w='99792' x='-208' y='762'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontsize='36'>Voting Coincidences Between UNGA Member States Over Time</run>
@@ -4644,7 +4614,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='14286' id='90' is-fixed='true' name='US Coincidence (2)' w='99862' x='554' y='71429'>
+                <zone fixed-size='280' h='14286' id='90' is-fixed='true' name='US Coincidence (2)' w='99862' x='484' y='71190'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4663,7 +4633,7 @@
                     <format attr='background-color' value='#f0eae8' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='14286' id='87' is-fixed='true' name='China Coincidence (2)' w='99170' x='484' y='86619'>
+                <zone fixed-size='280' h='14286' id='87' is-fixed='true' name='China Coincidence (2)' w='99170' x='484' y='86000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -4714,7 +4684,7 @@
           <default-map-tool-selection tool='1' />
         </viewpoint>
       </viewpoints>
-      <active id='100' />
+      <active id='90' />
       <simple-id uuid='{A9CB420B-2BFF-47AD-9AD5-B0BDF86C5761}' />
     </window>
     <window class='worksheet' hidden='true' name='China Coincidence (2)'>
@@ -4739,7 +4709,6 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' type='filter' />
             <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' type='filter' />
             <card pane-specification-id='10' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]' type='color' />
           </strip>
@@ -4867,7 +4836,6 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' type='filter' />
             <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' type='filter' />
             <card pane-specification-id='8' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]' type='color' />
           </strip>
