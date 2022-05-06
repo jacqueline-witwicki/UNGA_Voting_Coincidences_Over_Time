@@ -908,7 +908,7 @@
           <groupfilter function='member' level='[none:Year (UNITED_STATES_For_Map.csv):nk]' member='%null%' />
         </groupfilter>
       </group>
-      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='false' type='normalized' units='records'>
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' type='normalized' units='records'>
         <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/jacquelinewitwicki/Documents/My Tableau Repository/Datasources/world_countries_2020.shp+ (Multiple Connections).hyper' default-settings='yes' schema='Extract' sf-has-unconstrained-join='yes' sslmode='' tablename='Extract' update-time='05/06/2022 12:07:06 AM' username='tableau_internal_user'>
           <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='left' type='join'>
             <clause type='join'>
@@ -4708,7 +4708,7 @@
           <default-map-tool-selection tool='1' />
         </viewpoint>
       </viewpoints>
-      <active id='88' />
+      <active id='82' />
       <simple-id uuid='{A9CB420B-2BFF-47AD-9AD5-B0BDF86C5761}' />
     </window>
     <window class='worksheet' hidden='true' name='China Coincidence (2)'>

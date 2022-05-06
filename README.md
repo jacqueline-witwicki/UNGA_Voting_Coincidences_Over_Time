@@ -10,13 +10,13 @@
 > View the 2020 Report [HERE.]( https://www.state.gov/wp-content/uploads/2021/11/Report-Voting-Practices-in-the-United-Nations-2020.pdf "Report to Congress") 
 
 
+### EXPLORE THE DATA
 
-
-
-
-
-
-
+> The results of this repository can be used to gain a better understanding of the relationships between member states in the United Nations General Assembly (UNGA).
+> The results can also be used to determine how ideologically aligned various member states are.
+> These relationships can be modeled with maps,line graphs, bar charts, and various other visualization tools.
+> I created a Tableau Public page to model the result of using this repository to calculate voting coincidences for The United States, China, and Russia with all other member states.
+> Explore the results on Tableau [HERE.](https://public.tableau.com/views/VotingCoincidencesintheUnitedNationsGeneralAssemblyOverTime/VotingCoincidenceswithKeyUNGAMemberStates?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link "Jacqueline's Tableau")
 
 
 ### FILE BREAKDOWN
