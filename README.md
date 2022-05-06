@@ -39,13 +39,13 @@
 
 ####OUTPUT FILES:
   
-1. (~YEAR~)_RAW_COIN.csv  ->    
+1. (*YEAR*)_RAW_COIN.csv  ->    
   * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
   
   * Returns voting coincidence, coincidence breakdowns, and absentee rates.  
   
   
-2. (~YEAR~)_(~key1 COUNTRY~)_For_Map.csv  ->    
+2. (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv  ->    
   * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
   
   * Returns voting coincidence, coincidence breakdowns, and absentee rates.    
