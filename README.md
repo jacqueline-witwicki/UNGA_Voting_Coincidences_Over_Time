@@ -51,7 +51,7 @@
   * Returns voting coincidence, coincidence breakdowns, and absentee rates.    
   
   
-3. (~key1 COUNTRY~)_For_Map.csv  ->    
+3. (*key1 COUNTRY*)_For_Map.csv  ->    
   * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
   
   * Returns voting coincidence, coincidence breakdowns, and absentee rates.              
