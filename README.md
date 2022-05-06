@@ -3,7 +3,11 @@
 
 ### USER GUIDE
 
-
+> Voting coincidences measure how frequently two United Nations General Assembly (UNGA) member states voted together on all UNGA resolutions that came to a vote, in a given calendar year. 
+> When two states vote together, one point is added to their coincidence score. When one state votes and the other abstains or is absent, half a point is added. When states vote in opposition, no points are added. 
+> This coincidence total is divided by the number of resolutions that came to a vote (possible coincidence points) in the year. 
+> This is the same methodology used in The Department of State Report to Congress on Voting Practices in the United Nations for 2020 Section 406 of Public Law 101-246 (22 U.S.C. §2414a), with the small difference that absences are treated the same as abstentions.
+> View the 2020 Report [HERE.]( https://www.state.gov/wp-content/uploads/2021/11/Report-Voting-Practices-in-the-United-Nations-2020.pdf "Report to Congress") 
 
 
 
@@ -31,13 +35,13 @@
    
    * This file contains polygon information that produces a map of the world with 2020 country borders.
   
-   * This file is not included in this repository due to its size. It is produced by IPUMS International and can be downloaded by clicking the link at the top of the page [HERE](https://international.ipums.org/international/gis.shtml "IPUMS International Shape File")
+   * This file is not included in this repository due to its size. It is produced by IPUMS International and can be downloaded by clicking the link at the top of the page [HERE.](https://international.ipums.org/international/gis.shtml "IPUMS International Shape File")
    
 
 3. United Nations Digital Library Voting Data ->    
    * text_parser.py scrapes this data directly from the United Nations Digital Library Website and uses it to produce files with the (*YEAR*)_RAW_COIN.csv naming convention. 
   
-   * The digital library contains UNGA voting data organized by resolution and year. It can be viewed [HERE](https://digitallibrary.un.org/search?ln=en&cc=Voting%20Data&p=&f=&rm=&ln=en&sf=year&so=a&rg=50&c=Voting%20Data&c=&of=hb&fti=0&fct__2=General%20Assembly&fct__9=Vote&fct__3=2021&fti=0&fct__2=General%20Assembly&fct__9=Vote&fct__3=2021 "United Nations Digital Library")
+   * The digital library contains UNGA voting data organized by resolution and year. It can be viewed [HERE.](https://digitallibrary.un.org/search?ln=en&cc=Voting%20Data&p=&f=&rm=&ln=en&sf=year&so=a&rg=50&c=Voting%20Data&c=&of=hb&fti=0&fct__2=General%20Assembly&fct__9=Vote&fct__3=2021&fti=0&fct__2=General%20Assembly&fct__9=Vote&fct__3=2021 "United Nations Digital Library")
    
 
 #### PYTHON FILES:
