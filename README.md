@@ -3,9 +3,9 @@
 
 
 
-###FILE BREAKDOWN
+### FILE BREAKDOWN
 
-####PYTHON FILES:
+#### PYTHON FILES:
     
 1. text_parser.py ->   
   * Reads a copied vote count from the UN digital library and returns a list of Y,N,A, and Xs. This list can then be copied into a spreadsheet.
@@ -37,7 +37,7 @@
   * Returns voting coincidence, coincidence breakdowns, and absentee rates.    
   
 
-####OUTPUT FILES:
+#### OUTPUT FILES:
   
 1. (*YEAR*)_RAW_COIN.csv  ->    
   * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
