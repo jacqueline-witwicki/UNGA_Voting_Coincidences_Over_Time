@@ -1,10 +1,11 @@
 # UNGA_Voting_Coincidences_Over_Time
-A tool to analyze UNGA Voting coincidences between member states.
+## A tool to analyze UNGA Voting coincidences between member states.
 
 
 
 FILE BREAKDOWN:
-    UNGA_READER.py ->   Reads a copied vote count from the UN digital library and returns a list of Y,N,A, and Xs. This list can then be copied into a spreadsheet.
+    UNGA_READER.py ->   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reads a copied vote count from the UN digital library and returns a list of Y,N,A, and Xs. This list can then be copied into a spreadsheet.
                         Once this has been done for all relevant resolutions, filling the spreadsheet. The spreadsheet can be copied into its own txt file and run through VOTE_CNTR.py
                         I am currently writing a web scraper that will do this by year, not resolution. 
                     !!! For this code to work, you must copy the vote count for the resolution into the txt file that UNGA_READER.py is pulling from. 
