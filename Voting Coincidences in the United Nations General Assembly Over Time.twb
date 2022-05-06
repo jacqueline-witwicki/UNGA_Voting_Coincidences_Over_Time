@@ -4543,8 +4543,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2150' minheight='2150' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='120' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='99238' id='119' param='vert' type-v2='layout-flow' w='98892' x='554' y='381'>
+            <zone h='100000' id='122' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99238' id='121' param='vert' type-v2='layout-flow' w='98892' x='554' y='381'>
                 <zone forceUpdate='true' h='2762' id='38' type-v2='text' w='99792' x='-208' y='762'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontsize='36'>Voting Coincidences Between UNGA Member States Over Time</run>
