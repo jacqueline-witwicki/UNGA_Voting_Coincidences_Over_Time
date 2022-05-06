@@ -886,9 +886,20 @@
       <_.fcp.ObjectModelTableType.true...column caption='CHINA_2_For_Map.csv1' datatype='table' name='[__tableau_internal_object_id__].[CHINA_2_For_Map.csv_E10C62D472BD4E6A910942C568676CAF]' role='measure' type='quantitative' />
       <_.fcp.ObjectModelTableType.true...column caption='world_countries_2020.shp' datatype='table' name='[__tableau_internal_object_id__].[world_countries_2020.shp_96A3DBCB8D97438A952802C1BF4A7ABF]' role='measure' type='quantitative' />
       <column-instance column='[CNTRY_NAME]' derivation='None' name='[none:CNTRY_NAME:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Country (CHINA_2_For_Map.csv1)]' derivation='None' name='[none:Country (CHINA_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
       <column-instance column='[Country (RUSSIAN_FEDERATION_2_For_Map.csv1)]' derivation='None' name='[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
       <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
       <column-instance column='[Year (UNITED_STATES_For_Map.csv)]' derivation='None' name='[none:Year (UNITED_STATES_For_Map.csv):nk]' pivot='key' type='nominal' />
+      <group caption='Country (CHINA 2 For Map.csv1) Set' name='[Country (CHINA 2 For Map.csv1) Set]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+          <groupfilter function='level-members' level='[none:Country (CHINA_2_For_Map.csv1):nk]' />
+          <groupfilter function='union'>
+            <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;Unnamed: 0&quot;' />
+            <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;y LAO PEOPLE&apos;S DEMOCRATIC REPUBLIC&quot;' />
+            <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;y SAUDI ARABIA&quot;' />
+          </groupfilter>
+        </groupfilter>
+      </group>
       <group caption='Country Set' name='[Country Set]' name-style='unqualified' user:ui-builder='filter-group'>
         <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
           <groupfilter function='level-members' level='[none:Country:nk]' />
@@ -3848,6 +3859,15 @@
             <column-instance column='[Country (RUSSIAN_FEDERATION_2_For_Map.csv1)]' derivation='None' name='[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
             <column-instance column='[Year (CHINA_2_For_Map.csv1)]' derivation='None' name='[none:Year (CHINA_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]' filter-group='6'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;GERMANY&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;INDIA&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;PAKISTAN&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
+            </groupfilter>
+          </filter>
           <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' filter-group='3'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
@@ -3863,6 +3883,7 @@
           <slices>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</column>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</column>
+            <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4071,6 +4092,15 @@
             <column-instance column='[Country (RUSSIAN_FEDERATION_2_For_Map.csv1)]' derivation='None' name='[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
             <column-instance column='[Year (CHINA_2_For_Map.csv1)]' derivation='None' name='[none:Year (CHINA_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]' filter-group='6'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;GERMANY&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;INDIA&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;PAKISTAN&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
+            </groupfilter>
+          </filter>
           <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' filter-group='3'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
@@ -4086,6 +4116,7 @@
           <slices>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</column>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</column>
+            <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4103,6 +4134,11 @@
           <style-rule element='quick-filter'>
             <format attr='title' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' value='Chart Year ' />
             <format attr='title' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' value='Chart Countries'>
+              <formatted-text>
+                <run>Chart Countries</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]' value='Chart Countries'>
               <formatted-text>
                 <run>Chart Countries</run>
               </formatted-text>
@@ -4276,6 +4312,15 @@
             <column-instance column='[Country (RUSSIAN_FEDERATION_2_For_Map.csv1)]' derivation='None' name='[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
             <column-instance column='[Year (CHINA_2_For_Map.csv1)]' derivation='None' name='[none:Year (CHINA_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]' filter-group='6'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;GERMANY&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;INDIA&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;PAKISTAN&quot;' />
+              <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;UKRAINE&quot;' />
+            </groupfilter>
+          </filter>
           <filter class='categorical' column='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' filter-group='3'>
             <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
               <groupfilter function='member' level='[none:Country (CHINA_2_For_Map.csv1):nk]' member='&quot;BRAZIL&quot;' />
@@ -4291,6 +4336,7 @@
           <slices>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]</column>
             <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</column>
+            <column>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -4464,10 +4510,8 @@
         <datasource caption='world_countries_2020.shp+ (Multiple Connections)' name='federated.0d2gqmz107p0m71c0v40x12wk7si' />
       </datasources>
       <datasource-dependencies datasource='federated.0d2gqmz107p0m71c0v40x12wk7si'>
-        <column caption='Country (CHINA 2 For Map.csv1)' datatype='string' name='[Country (CHINA_2_For_Map.csv1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
         <column caption='Year (CHINA 2 For Map.csv1)' datatype='string' name='[Year (CHINA_2_For_Map.csv1)]' role='dimension' type='nominal' />
         <column datatype='string' name='[Year]' role='dimension' type='nominal' />
-        <column-instance column='[Country (CHINA_2_For_Map.csv1)]' derivation='None' name='[none:Country (CHINA_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
         <column-instance column='[Year (CHINA_2_For_Map.csv1)]' derivation='None' name='[none:Year (CHINA_2_For_Map.csv1):nk]' pivot='key' type='nominal' />
         <column-instance column='[Year]' derivation='None' name='[none:Year:nk]' pivot='key' type='nominal' />
       </datasource-dependencies>
@@ -4509,14 +4553,6 @@
           </zone-style>
         </zone>
         <zone h='14286' id='87' name='China Coincidence (2)' w='99170' x='484' y='86619' />
-        <zone h='3381' id='88' mode='checkdropdown' name='China Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' type-v2='filter' w='23806' x='25467' y='51429'>
-          <zone-style>
-            <format attr='border-color' value='#000000' />
-            <format attr='border-style' value='solid' />
-            <format attr='border-width' value='1' />
-            <format attr='background-color' value='#f0eae8' />
-          </zone-style>
-        </zone>
         <zone h='3381' id='89' mode='checkdropdown' name='China Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' type-v2='filter' w='23806' x='484' y='51429'>
           <zone-style>
             <format attr='border-color' value='#000000' />
@@ -4527,13 +4563,21 @@
         </zone>
         <zone h='14286' id='90' name='US Coincidence (2)' w='99862' x='554' y='71429' />
         <zone h='14286' id='91' name='Russia Coincidence (2)' w='99862' x='484' y='56333' />
+        <zone h='3381' id='100' mode='checkdropdown' name='Russia Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]' type-v2='filter' values='database' w='23806' x='25052' y='51429'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='background-color' value='#f0eae8' />
+          </zone-style>
+        </zone>
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2150' minheight='2150' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='99' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='99238' id='98' param='vert' type-v2='layout-flow' w='98892' x='554' y='381'>
+            <zone h='100000' id='102' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99238' id='101' param='vert' type-v2='layout-flow' w='98892' x='554' y='381'>
                 <zone forceUpdate='true' h='2762' id='38' type-v2='text' w='99792' x='-208' y='762'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontsize='36'>Voting Coincidences Between UNGA Member States Over Time</run>
@@ -4619,6 +4663,16 @@
                     <format attr='background-color' value='#fefaf1' />
                   </zone-style>
                 </zone>
+                <zone h='3381' id='100' mode='checkdropdown' name='Russia Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]' type-v2='filter' values='database' w='23806' x='25052' y='51429'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#f0eae8' />
+                  </zone-style>
+                </zone>
                 <zone fixed-size='280' h='14286' id='91' is-fixed='true' name='Russia Coincidence (2)' w='99862' x='484' y='56333'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4635,16 +4689,6 @@
                     <format attr='border-width' value='0' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
-                  </zone-style>
-                </zone>
-                <zone h='3381' id='88' mode='checkdropdown' name='China Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' type-v2='filter' w='23806' x='25467' y='51429'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='solid' />
-                    <format attr='border-width' value='1' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                    <format attr='background-color' value='#f0eae8' />
                   </zone-style>
                 </zone>
                 <zone h='3381' id='89' mode='checkdropdown' name='China Coincidence (2)' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' type-v2='filter' w='23806' x='484' y='51429'>
@@ -4714,7 +4758,7 @@
           <default-map-tool-selection tool='1' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='100' />
       <simple-id uuid='{A9CB420B-2BFF-47AD-9AD5-B0BDF86C5761}' />
     </window>
     <window class='worksheet' hidden='true' name='China Coincidence (2)'>
@@ -4816,7 +4860,7 @@
         </edge>
         <edge name='right'>
           <strip size='160'>
-            <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]' type='filter' />
+            <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]' type='filter' />
             <card mode='checkdropdown' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Year (CHINA_2_For_Map.csv1):nk]' type='filter' />
             <card pane-specification-id='6' param='[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]' type='color' />
           </strip>
@@ -4825,6 +4869,7 @@
       <viewpoint>
         <highlight>
           <color-one-way>
+            <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country (CHINA 2 For Map.csv1) Set]</field>
             <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[Country Set]</field>
             <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (CHINA_2_For_Map.csv1):nk]</field>
             <field>[federated.0d2gqmz107p0m71c0v40x12wk7si].[none:Country (RUSSIAN_FEDERATION_2_For_Map.csv1):nk]</field>
