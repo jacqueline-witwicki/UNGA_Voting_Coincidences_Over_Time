@@ -5,7 +5,7 @@ Created on Mon Apr 18 16:45:24 2022
 
 @author: jacquelinewitwicki
 """
-
+#NOTE: THE YEAR USED IN THE EACHYEAR FUNCTION IN LINE 36 AND USED TO LABEL THE OUTPUT FILE SHOULD ALL BE THE SAME.
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -81,6 +81,7 @@ def eachres(java):
 #This is used in the below loop to ensure countries can be tracked over time, regardless of name changes.
 #The decision was made to track  Serbia and Montenegro's voting data under Serbia, until Serbia and Montenegro split.
 #As the focus of this analysis was on the last 20-30 years, this only captures name changes after the break up of the USSR. 
+#The choice was made to exclude some state that no longer exist from tables 
 #More states can be added in the below dictionary to extend analysis further back in the "Old Name":"New Name" format
 fix_names={
     "CZECH REPUBLIC":"CZECHIA",
