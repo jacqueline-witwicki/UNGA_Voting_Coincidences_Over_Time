@@ -17,6 +17,39 @@
 
 ### FILE BREAKDOWN
 
+
+#### INPUTS :
+
+1. Country_Code_index.txt ->   
+   * This file contains UNGA member states and their country codes.
+
+   * It is used by DF_OUTPUT_EDIT.py to produce files with the (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv naming convention.
+                    
+   
+2. wourld_countries_2020.shp  ->    
+   * This file joins with files that have the (*key1 COUNTRY*)_For_Map.csv naming convention on the three digit country codes.
+   
+   * This file contains polygon information that produces a map of the world with 2020 country borders.
+  
+   * This file is not included in this repository due to its size. It is produced by IPUMS International and can be downloaded by clicking the link at the top of the page [HERE](https://international.ipums.org/international/gis.shtml "IPUMS International Shape File")
+   
+   * The user inserts the country they want to calculate coincidences for, against the rest of all UNGA member states, as key1, in line 103. This selection should be reflected in the name of the output file.   
+   
+   * This file returns a CSV file with the naming scheme (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv , which contains UNGA member countries, their voting coincidence with the key1 country as a decimal, the year associated with the input file, and their three digit numeric country code.
+   
+   * The output of this code is an input of For_Map_Joiner.py  
+  
+
+3. United Nations Digital Library Voting Data ->    
+   * This file concatenates a list of files produced by DF_OUTPUT_EDIT.py to create a file using the (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv naming pattern. 
+  
+   * The user selects what files they wish to be included in the output, (*key1 COUNTRY*)_For_Map.csv.
+   
+   * (*key1 COUNTRY*)_For_Map.csv can be joined with wourld_countries_2020.shp from IPUMS International using Tableau to create outputs similar to those in the Tableau Public link above. 
+  
+
+
+
 #### PYTHON FILES:
     
 1. text_parser.py ->   
@@ -42,27 +75,29 @@
   
 
 3. For_Map_Joiner.py ->    
-   * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
+   * This file concatenates a list of files produced by DF_OUTPUT_EDIT.py to create a file using the (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv naming pattern. 
   
-   * Returns voting coincidence, coincidence breakdowns, and absentee rates.    
+   * The user selects what files they wish to be included in the output, (*key1 COUNTRY*)_For_Map.csv.
+   
+   * (*key1 COUNTRY*)_For_Map.csv can be joined with wourld_countries_2020.shp from IPUMS International using Tableau to create outputs similar to those in the Tableau Public link above. 
   
 
 #### OUTPUT FILES:
   
 1. (*YEAR*)_RAW_COIN.csv  ->    
-   * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
+   * Files with this naming convention are outputs of text_parser.py and inputs of DF_OUTPUT_EDIT.py.  
   
-   * Returns voting coincidence, coincidence breakdowns, and absentee rates.  
+   * These files contain each resolution for a given year and each UNGA member state voted.  In the file, Y indicates a yes vote by the column country for the row resolution. N is a no vote. A is an abstention. X is an absence.
   
   
 2. (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv  ->    
-   * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
+   * Files with this naming convention are outputs of DF_OUTPUT_EDIT.py and inputs of  For_Map_Joiner.py.  
   
-   * Returns voting coincidence, coincidence breakdowns, and absentee rates.    
+   * These files contain the names of all UNGA member countries, their corresponding country codes, the year associated with the corresponding (*YEAR*)_RAW_COIN.csv input file, and their voting coincidence with the key1 country.
   
   
 3. (*key1 COUNTRY*)_For_Map.csv  ->    
-   * Reads a txt file with vote counts that have been translated by UNGA_READER.py.  
+   * Files with this naming convention are outputs of For_Map_Joiner.py and inputs of the Tableau project, Voting Coincidences in the United Nations General Assembly Over Time.twb. These files can be joined with wourld_countries_2020.shp from IPUMS International using Tableau to create various visualizations.
   
-   * Returns voting coincidence, coincidence breakdowns, and absentee rates.              
+   * These files hold concatenated information from all For_Map_Joiner.py input files used in their production.           
             
