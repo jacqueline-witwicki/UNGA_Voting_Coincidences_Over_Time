@@ -97,5 +97,13 @@
   
    * These files hold concatenated information from all For_Map_Joiner.py input files used in their production.      
    
-   * Files with this naming convention that also contain the number 2 include data from 1992-2022. All other files with this name contain data from 2003-2022.          
+   * Files with this naming convention that also contain the number 2 include data from 1992-2022. All other files with this name contain data from 2003-2022.  
+
+
+4. Voting Coincidences in the United Nations General Assembly Over Time.twb  ->    
+   * This Tableau file is the result of joining three different (*key1 COUNTRY*)_For_Map.csv files for (The United States, China, and Russia with wourld_countries_2020.shp, in Tableau.
+   
+   * The files are joined on the the three digit country codes for each country. 
+   
+   * The Tableau Dashboard in the files contains three maps and three bar graphs, visualizing coincidences over time for the key1 countries associated with the input files.
             
