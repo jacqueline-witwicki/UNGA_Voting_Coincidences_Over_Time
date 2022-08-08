@@ -101,7 +101,7 @@
 
 
 4. Voting Coincidences in the United Nations General Assembly Over Time.twb  ->    
-   * This Tableau file is the result of joining three different (*key1 COUNTRY*)_For_Map.csv files for (The United States, China, and Russia with wourld_countries_2020.shp, in Tableau.
+   * This Tableau file is the result of joining three different (*key1 COUNTRY*)_For_Map.csv files for (The United States, China, and Russia with world_countries_2020.shp, in Tableau.
    
    * The files are joined on the three digit country codes for each country. 
    
