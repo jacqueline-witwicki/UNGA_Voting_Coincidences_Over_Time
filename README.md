@@ -75,7 +75,7 @@
   
    * The user selects what files with the (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv naming scheme they wish to be included in the output, (*key1 COUNTRY*)_For_Map.csv. These input files should have the same key1 country and span multiple years of interest. 
    
-   * (*key1 COUNTRY*)_For_Map.csv can be joined with wourld_countries_2020.shp from IPUMS International using Tableau to create outputs similar to those in the Tableau Public link above. 
+   * (*key1 COUNTRY*)_For_Map.csv can be joined with world_countries_2020.shp from IPUMS International using Tableau to create outputs similar to those in the Tableau Public link above. 
   
 
 #### OUTPUT FILES:
@@ -93,7 +93,7 @@
   
   
 3. (*key1 COUNTRY*)_For_Map.csv  ->    
-   * Files with this naming convention are outputs of For_Map_Joiner.py and inputs of the Tableau project, Voting Coincidences in the United Nations General Assembly Over Time.twb. These files can be joined with wourld_countries_2020.shp from IPUMS International using Tableau to create various visualizations.
+   * Files with this naming convention are outputs of For_Map_Joiner.py and inputs of the Tableau project, Voting Coincidences in the United Nations General Assembly Over Time.twb. These files can be joined with world_countries_2020.shp from IPUMS International using Tableau to create various visualizations.
   
    * These files hold concatenated information from all For_Map_Joiner.py input files used in their production.      
    
