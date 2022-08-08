@@ -27,12 +27,12 @@
 #### INPUTS :
 
 1. Country_Code_index.txt ->   
-   * This file contains UNGA member states and their country codes. I wrote this file by hand using country codes in wourld_countries_2020.shp. 
+   * This file contains UNGA member states and their country codes. I wrote this file by hand using country codes in world_countries_2020.shp. 
 
    * It is used by DF_OUTPUT_EDIT.py to produce files with the (*YEAR*)_(*key1 COUNTRY*)_For_Map.csv naming convention.
                     
    
-2. wourld_countries_2020.shp  ->    
+2. world_countries_2020.shp  ->    
    * Using Tableau, this file joins with files that have the (*key1 COUNTRY*)_For_Map.csv naming convention on the three digit country codes.
    
    * This file contains polygon information that produces a map of the world with 2020 country borders.
